@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <title>ASK</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-light" style="background-color: #f8f9fa;">
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <a class="navbar-brand fs-3 text-dark" href="index.html">TankOverflow</a>
+
+            <div class="position-absolute start-50 translate-middle-x d-flex align-items-center gap-2">
+                <input id="searchInput" type="text" class="form-control" placeholder="Search..." style="width: 300px;">
+                <a href="ask.html" class="btn btn-primary">Ask!</a>
+            </div>
+
+            <div class="dropdown">
+                <a href="#" class="d-flex align-items-center text-dark text-decoration-none dropdown-toggle"
+                    id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="images/user.jpg" alt="User" width="40" height="40" class="rounded-circle">
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                    <li><a class="dropdown-item" href="settings.html">Settings</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item text-danger" href="login.html">Log out</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-8">
+
+                <div class="ask-form p-4 border rounded bg-light">
+                    <h4 class="fw-bold mb-4">Ask a Question</h4>
+
+                    <div class="mb-3">
+                        <label for="questionTitle" class="form-label">Question Title</label>
+                        <input type="text" class="form-control" id="questionTitle"
+                            placeholder="Enter your question title">
+                        <div class="alert alert-danger small mt-2" role="alert">
+                            Title must be between 10 and 100 characters.
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="questionText" class="form-label">Question Text</label>
+                        <textarea class="form-control" id="questionText" rows="8"
+                            placeholder="Describe your question in detail..."
+                            style="resize: none; overflow-y: auto;"></textarea>
+                        <div class="alert alert-danger small mt-2" role="alert">
+                            Text must be less than 3000 characters.
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="questionTags" class="form-label">Tags</label>
+                        <input type="text" class="form-control" id="questionTags"
+                            placeholder="Enter tags separated by commas">
+                        <div class="form-text">Add relevant tags to help others find your question.</div>
+                    </div>
+
+                    <button class="btn btn-primary">Post Question</button>
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="p-3 mb-3 border rounded">
+                    <h5 class="fw-bold mb-3">Popular Tags</h5>
+                    <div>
+                        <a href="index.html" class="badge bg-primary me-1 mb-1 text-decoration-none">javascript</a>
+                        <a href="index.html" class="badge bg-primary me-1 mb-1 text-decoration-none">python</a>
+                        <a href="index.html" class="badge bg-primary me-1 mb-1 text-decoration-none">css</a>
+                        <a href="index.html" class="badge bg-primary me-1 mb-1 text-decoration-none">react</a>
+                        <a href="index.html" class="badge bg-primary me-1 mb-1 text-decoration-none">sql</a>
+                    </div>
+                </div>
+
+                <div class="p-3 border rounded">
+                    <h5 class="fw-bold mb-3">Top Users</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="d-flex align-items-center mb-2">
+                            <img src="images/user.jpg" alt="User" width="40" height="40" class="rounded-circle me-2">
+                            <div>
+                                <strong>GearHead99</strong><br>
+                                <small class="text-muted">1,250 pts</small>
+                            </div>
+                        </li>
+                        <li class="d-flex align-items-center mb-2">
+                            <img src="images/user.jpg" alt="User" width="40" height="40" class="rounded-circle me-2">
+                            <div>
+                                <strong>AutoMaster</strong><br>
+                                <small class="text-muted">1,120 pts</small>
+                            </div>
+                        </li>
+                        <li class="d-flex align-items-center mb-2">
+                            <img src="images/user.jpg" alt="User" width="40" height="40" class="rounded-circle me-2">
+                            <div>
+                                <strong>RoadRunner</strong><br>
+                                <small class="text-muted">980 pts</small>
+                            </div>
+                        </li>
+                        <li class="d-flex align-items-center mb-2">
+                            <img src="images/user.jpg" alt="User" width="40" height="40" class="rounded-circle me-2">
+                            <div>
+                                <strong>TorqueKing</strong><br>
+                                <small class="text-muted">870 pts</small>
+                            </div>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <img src="images/user.jpg" alt="User" width="40" height="40" class="rounded-circle me-2">
+                            <div>
+                                <strong>ClutchQueen</strong><br>
+                                <small class="text-muted">790 pts</small>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
